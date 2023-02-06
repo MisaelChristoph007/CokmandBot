@@ -1,0 +1,142 @@
+<DOCTYPE html>
+  <html>
+    <head>
+      <body>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,800;1,600&display=swap" 
+    rel="stylesheet">
+   
+   <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+     <div class="firstline">
+          <div class="shapes1" style="--i:1"></div>
+          <div class="shapes2" style="--i:2"></div>
+          <div class="shapes3" style="--i:3"></div>
+          <div class="shapes4" style="--i:4"></div>
+          <div class="shapes5" style="--i:5"></div>
+     </div>
+     <br>
+     <br>
+     <div class="secondline">
+          <div class="loading">Loading</div>
+     </div>
+     <br>
+     <br>
+     <div class="thirdline">
+          <div class="shapes6" style="--i:1"></div>
+          <div class="shapes7" style="--i:2"></div>
+          <div class="shapes8" style="--i:3"></div>
+          <div class="shapes9" style="--i:4"></div>
+          <div class="shapes10" style="--i:5"></div>
+     </div>
+   </body>
+      </body>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.firstline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 500px;
+}
+.shapes1,.shapes2,.shapes3,.shapes4,.shapes5{
+    width: 100px;
+    height: 100px;
+    transform: skew(30deg);
+    background-color: yellow;
+    box-shadow: 0 0 80px yellow, 0 0 100px yellow;
+    animation: anima1 2s infinite linear;
+    animation-delay: calc(0.05s*var(--i));
+}
+@keyframes anima1{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        margin-top: -50px;
+        box-shadow: 0 0 0 0 transparent;
+    }
+    100%{
+        filter: hue-rotate(360deg);
+        margin-top: 10px;
+    }
+}
+.secondline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: -230px;
+    margin-left: 60px;
+}
+.loading{
+    width: 500px;
+    background-color: transparent;
+    color: transparent;
+    text-align: center;
+    font-family: "source sans 3",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 10px;
+    border: solid 2px yellow;
+    animation: loading 2s infinite linear;
+}
+@keyframes loading{
+    0%{
+        color: transparent;
+        border-color: transparent;
+    }
+    50%{
+        color: lightgreen;
+        box-shadow: 0 0 30px yellow;
+    }
+    100%{
+        color: transparent;
+    }
+}
+.thirdline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 630px;
+    margin-top: -300px;
+}
+.shapes6,.shapes7,.shapes8,.shapes9,.shapes10{
+    width: 100px;
+    height: 100px;
+    transform: skew(-30deg);
+    background-color: yellow;
+    box-shadow: 0 0 80px yellow, 0 0 100px yellow;
+    animation: anima2 2s infinite linear;
+    animation-delay: calc(0.05s*var(--i));
+}
+@keyframes anima2{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        margin-top: 50px;
+        box-shadow: 0 0 0 0 transparent;
+    }
+    100%{
+        filter: hue-rotate(360deg);
+        margin-top: -10px;
+    }
+}
+    </style>
+    </head>
+  </html>
